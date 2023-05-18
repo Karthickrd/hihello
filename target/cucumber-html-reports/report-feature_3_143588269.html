@@ -1,0 +1,1278 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.tablesorter.min.js"></script>
+<script src="js/Chart.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script>
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<title>Cucumber Reports  - Feature: Address Module API Automation</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+        <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation" ><a href="overview-steps.html">Steps</a></li>
+        <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>OMR Branch Grocery API Automation</td>
+      <td>06 May 2023, 13:21</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+  </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Feature Report</h2>
+  </div>
+</div>
+
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table class="stats-table">
+
+
+<thead>
+  <tr class="header dont-sort">
+      <th></th>
+    <th colspan="6">Steps</th>
+    <th colspan="3">Scenarios</th>
+    <th colspan="2">Features</th>
+  </tr>
+  <tr>
+    <th>Feature</th>
+    <th class="passed">Passed</th>
+    <th class="failed">Failed</th>
+    <th class="skipped">Skipped</th>
+    <th class="pending">Pending</th>
+    <th class="undefined">Undefined</th>
+    <th class="total">Total</th>
+
+    <th class="passed">Passed</th>
+    <th class="failed">Failed</th>
+    <th class="total">Total</th>
+
+    <th>Duration</th>
+    <th>Status</th>
+  </tr>
+</thead>
+
+
+        <tbody>
+        <tr>
+          <td class="tagname">Address Module API Automation</td>
+          <td      class="passed"    >19</td>
+          <td >0</td>
+          <td >0</td>
+          <td >0</td>
+          <td >0</td>
+          <td class="total">19</td>
+
+          <td  class="passed"    >4</td>
+          <td >0</td>
+          <td class="total">4</td>
+
+          <td class="duration" data-value="6570000000">6.570</td>
+          <td class="passed">Passed</td>
+        </tr>
+        </tbody>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-1 col-md-offset-10">
+      <i class="fa fa-chevron-circle-down fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('show')"></i>
+      <i class="fa fa-chevron-circle-up fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('hide')"></i>
+    </div>
+  </div>
+</div>
+
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <div class="feature">
+
+<div class="tags indention">
+    <b>Tags:</b>
+       <a href="report-tag_2535156627.html">@Address</a>
+</div>
+
+
+<div class="brief passed">
+  <span class="keyword indention">Feature</span>
+  <span class="name">Address Module API Automation</span>
+
+
+</div>
+
+        <div class="description indention"></div>
+
+        <div class="elements inner-level">
+
+<div class="element">
+
+
+<div class="tags indention">
+    <b>Tags:</b>
+       <a href="report-tag_2535156627.html">@Address</a>
+       <a href="report-tag_3817524531.html">@Address_Add_User</a>
+</div>
+
+
+  <span class="lead-duration duration">1.681</span>
+
+
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-1">
+
+<div class="brief passed">
+  <span class="keyword indention">Scenario Outline</span>
+  <span class="name">Verify and user address to the application through api</span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-1" class="collapse collapsable-details ">
+
+
+
+
+
+<div class="steps inner-level">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-2">
+
+<div class="brief passed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </div>
+
+  <div id="steps-2" class="inner-level collapse collapsable-details ">
+      <div class="step">
+
+
+<div class="brief step-name-Given passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">User add header and bearer authurization for accesing address endpoints</span>
+
+  <span class="lead-duration duration">0.001</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When passed">
+  <span class="keyword indention">When</span>
+  <span class="name">User add request body for add new address <span class="argument">&quot;Karthick&quot;</span>,<span class="argument">&quot;Rajendran&quot;</span>,<span class="argument">&quot;7305055527&quot;</span>,<span class="argument">&quot;HappyStay&quot;</span>,<span class="argument">&quot;105&quot;</span>,<span class="argument">&quot;765&quot;</span>,<span class="argument">&quot;100&quot;</span>,<span class="argument">&quot;600097&quot;</span>,<span class="argument">&quot;Thoraippakkam&quot;</span> and <span class="argument">&quot;Work&quot;</span></span>
+
+  <span class="lead-duration duration">0.012</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">User send <span class="argument">&quot;POST&quot;</span> request for addUserAddress endpoint</span>
+
+  <span class="lead-duration duration">1.656</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">User verify the status code is <span class="argument">200</span></span>
+
+  <span class="lead-duration duration">0.001</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">User verify the addUserAddress response message matches <span class="argument">&quot;Address added successfully&quot;</span> and save the address Id</span>
+
+  <span class="lead-duration duration">0.011</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+  </div>
+</div>
+
+
+
+
+  <div class="inner-level hooks-element-after">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-3">
+
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+    </div>
+
+    <div id="after-3" class="inner-level collapse collapsable-details ">
+        <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">After</span>
+              <span class="location name">com.stepdefinition.HooksClass.afterScenario(io.cucumber.java.Scenario)</span>
+
+  <span class="lead-duration duration">0.002</span>
+
+          </div>
+
+
+
+
+
+  <div class="outputs inner-level">
+      <div class="output indention">
+        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#output-4">
+          Output 1
+          <i class="chevron fa fa-fw"></i>
+        </div>
+        <div id="output-4" class="collapse collapsable-details " >
+          
+          <pre><p>{
+    &quot;status&quot;: 200,
+    &quot;message&quot;: &quot;Address added successfully&quot;,
+    &quot;address_id&quot;: 53534
+}</p></pre>
+        </div>
+      </div>
+  </div>
+
+
+        </div>
+    </div>
+  </div>
+
+  </div>
+</div>
+
+
+<div class="element">
+
+
+<div class="tags indention">
+    <b>Tags:</b>
+       <a href="report-tag_2535156627.html">@Address</a>
+       <a href="report-tag_2318182741.html">@Address_Update_User</a>
+</div>
+
+
+  <span class="lead-duration duration">1.910</span>
+
+
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-5">
+
+<div class="brief passed">
+  <span class="keyword indention">Scenario Outline</span>
+  <span class="name">Verify update user address to the application through api</span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-5" class="collapse collapsable-details ">
+
+
+
+
+
+<div class="steps inner-level">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-6">
+
+<div class="brief passed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </div>
+
+  <div id="steps-6" class="inner-level collapse collapsable-details ">
+      <div class="step">
+
+
+<div class="brief step-name-Given passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">User add header and bearer authurization for accesing address endpoints</span>
+
+  <span class="lead-duration duration">0.002</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When passed">
+  <span class="keyword indention">When</span>
+  <span class="name">User add request body for update user address with saved addressId <span class="argument">&quot;&lt;first_Name&gt;&quot;</span>,<span class="argument">&quot;&lt;last_Name&gt;&quot;</span>,<span class="argument">&quot;7305055527&quot;</span>,<span class="argument">&quot;HappyStay&quot;</span>,<span class="argument">&quot;105&quot;</span>,<span class="argument">&quot;765&quot;</span>,<span class="argument">&quot;100&quot;</span>,<span class="argument">&quot;&lt;zipCode&gt;&quot;</span>,<span class="argument">&quot;Thoraippakkam&quot;</span> and <span class="argument">&quot;&lt;address_Type&gt;&quot;</span></span>
+
+  <span class="lead-duration duration">0.013</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">User send <span class="argument">&quot;PUT&quot;</span> request for updateUserAddress endpoint</span>
+
+  <span class="lead-duration duration">1.879</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">User verify the status code is <span class="argument">200</span></span>
+
+  <span class="lead-duration duration">0.002</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">User verify the updateUserAddress response message matches <span class="argument">&quot;Address updated successfully&quot;</span></span>
+
+  <span class="lead-duration duration">0.014</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+  </div>
+</div>
+
+
+
+
+  <div class="inner-level hooks-element-after">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-7">
+
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+    </div>
+
+    <div id="after-7" class="inner-level collapse collapsable-details ">
+        <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">After</span>
+              <span class="location name">com.stepdefinition.HooksClass.afterScenario(io.cucumber.java.Scenario)</span>
+
+  <span class="lead-duration duration">0.002</span>
+
+          </div>
+
+
+
+
+
+  <div class="outputs inner-level">
+      <div class="output indention">
+        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#output-8">
+          Output 1
+          <i class="chevron fa fa-fw"></i>
+        </div>
+        <div id="output-8" class="collapse collapsable-details " >
+          
+          <pre><p>{
+    &quot;status&quot;: 200,
+    &quot;message&quot;: &quot;Address updated successfully&quot;
+}</p></pre>
+        </div>
+      </div>
+  </div>
+
+
+        </div>
+    </div>
+  </div>
+
+  </div>
+</div>
+
+
+<div class="element">
+
+
+<div class="tags indention">
+    <b>Tags:</b>
+       <a href="report-tag_2535156627.html">@Address</a>
+       <a href="report-tag_2735054750.html">@Address_Get_User</a>
+</div>
+
+
+  <span class="lead-duration duration">1.493</span>
+
+
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-9">
+
+<div class="brief passed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">Verify get user address to the application through api</span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-9" class="collapse collapsable-details ">
+
+
+
+
+
+<div class="steps inner-level">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-10">
+
+<div class="brief passed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </div>
+
+  <div id="steps-10" class="inner-level collapse collapsable-details ">
+      <div class="step">
+
+
+<div class="brief step-name-Given passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">User add header and bearer authorization for accessing getUserAddress endpoint</span>
+
+  <span class="lead-duration duration">0.001</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">User send <span class="argument">&quot;GET&quot;</span> request for getUserAddress endpoint</span>
+
+  <span class="lead-duration duration">1.464</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">User verify the status code is <span class="argument">200</span></span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">User Should verify the getUserAddress response message matches <span class="argument">&quot;OK&quot;</span></span>
+
+  <span class="lead-duration duration">0.028</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+  </div>
+</div>
+
+
+
+
+  <div class="inner-level hooks-element-after">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-11">
+
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+    </div>
+
+    <div id="after-11" class="inner-level collapse collapsable-details ">
+        <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">After</span>
+              <span class="location name">com.stepdefinition.HooksClass.afterScenario(io.cucumber.java.Scenario)</span>
+
+  <span class="lead-duration duration">0.004</span>
+
+          </div>
+
+
+
+
+
+  <div class="outputs inner-level">
+      <div class="output indention">
+        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#output-12">
+          Output 1
+          <i class="chevron fa fa-fw"></i>
+        </div>
+        <div id="output-12" class="collapse collapsable-details " >
+          
+          <pre><p>{
+    &quot;status&quot;: 200,
+    &quot;message&quot;: &quot;OK&quot;,
+    &quot;data&quot;: [
+        {
+            &quot;id&quot;: 52937,
+            &quot;address_code&quot;: &quot;ADDZbPIi&quot;,
+            &quot;user_id&quot;: 1759,
+            &quot;first_name&quot;: &quot;Raj&quot;,
+            &quot;last_name&quot;: &quot;Khundra&quot;,
+            &quot;mobile&quot;: &quot;1234567898&quot;,
+            &quot;apartment&quot;: &quot;apartment&quot;,
+            &quot;address&quot;: &quot;64/63 partap nagar&quot;,
+            &quot;country_id&quot;: 101,
+            &quot;state_id&quot;: 33,
+            &quot;city_id&quot;: 3378,
+            &quot;zipcode&quot;: &quot;202020&quot;,
+            &quot;lat&quot;: null,
+            &quot;lng&quot;: null,
+            &quot;default&quot;: 1,
+            &quot;status&quot;: &quot;AC&quot;,
+            &quot;address_type&quot;: &quot;home&quot;,
+            &quot;created_at&quot;: &quot;2023-05-05 11:13:24&quot;,
+            &quot;updated_at&quot;: &quot;2023-05-05 11:13:24&quot;,
+            &quot;city&quot;: &quot;Jaipur&quot;,
+            &quot;state&quot;: &quot;Rajasthan&quot;,
+            &quot;country&quot;: &quot;India&quot;,
+            &quot;is_selected&quot;: 1
+        },
+        {
+            &quot;id&quot;: 52940,
+            &quot;address_code&quot;: &quot;ADDLgSwV&quot;,
+            &quot;user_id&quot;: 1759,
+            &quot;first_name&quot;: &quot;Raj&quot;,
+            &quot;last_name&quot;: &quot;Khundra&quot;,
+            &quot;mobile&quot;: &quot;1234567898&quot;,
+            &quot;apartment&quot;: &quot;apartment&quot;,
+            &quot;address&quot;: &quot;64/63 partap nagar&quot;,
+            &quot;country_id&quot;: 101,
+            &quot;state_id&quot;: 33,
+            &quot;city_id&quot;: 3378,
+            &quot;zipcode&quot;: &quot;202020&quot;,
+            &quot;lat&quot;: null,
+            &quot;lng&quot;: null,
+            &quot;default&quot;: 0,
+            &quot;status&quot;: &quot;AC&quot;,
+            &quot;address_type&quot;: &quot;home&quot;,
+            &quot;created_at&quot;: &quot;2023-05-05 11:14:02&quot;,
+            &quot;updated_at&quot;: &quot;2023-05-05 11:14:02&quot;,
+            &quot;city&quot;: &quot;Jaipur&quot;,
+            &quot;state&quot;: &quot;Rajasthan&quot;,
+            &quot;country&quot;: &quot;India&quot;,
+            &quot;is_selected&quot;: 0
+        },
+        {
+            &quot;id&quot;: 52983,
+            &quot;address_code&quot;: &quot;ADDNAdyU&quot;,
+            &quot;user_id&quot;: 1759,
+            &quot;first_name&quot;: &quot;Karthick&quot;,
+            &quot;last_name&quot;: &quot;Rajendran&quot;,
+            &quot;mobile&quot;: &quot;7305055527&quot;,
+            &quot;apartment&quot;: &quot;HappyStay&quot;,
+            &quot;address&quot;: &quot;Thoraippakkam&quot;,
+            &quot;country_id&quot;: 100,
+            &quot;state_id&quot;: 35,
+            &quot;city_id&quot;: 4256,
+            &quot;zipcode&quot;: &quot;600097&quot;,
+            &quot;lat&quot;: null,
+            &quot;lng&quot;: null,
+            &quot;default&quot;: 0,
+            &quot;status&quot;: &quot;AC&quot;,
+            &quot;address_type&quot;: &quot;Work&quot;,
+            &quot;created_at&quot;: &quot;2023-05-05 11:57:11&quot;,
+            &quot;updated_at&quot;: &quot;2023-05-05 11:57:11&quot;,
+            &quot;city&quot;: &quot;Tenkasi&quot;,
+            &quot;state&quot;: &quot;Tamil Nadu&quot;,
+            &quot;country&quot;: &quot;Iceland&quot;,
+            &quot;is_selected&quot;: 0
+        },
+        {
+            &quot;id&quot;: 52986,
+            &quot;address_code&quot;: &quot;ADDAVVA1&quot;,
+            &quot;user_id&quot;: 1759,
+            &quot;first_name&quot;: &quot;Karthick&quot;,
+            &quot;last_name&quot;: &quot;Rajendran&quot;,
+            &quot;mobile&quot;: &quot;7305055527&quot;,
+            &quot;apartment&quot;: &quot;HappyStay&quot;,
+            &quot;address&quot;: &quot;Thoraippakkam&quot;,
+            &quot;country_id&quot;: 100,
+            &quot;state_id&quot;: 35,
+            &quot;city_id&quot;: 4256,
+            &quot;zipcode&quot;: &quot;600097&quot;,
+            &quot;lat&quot;: null,
+            &quot;lng&quot;: null,
+            &quot;default&quot;: 0,
+            &quot;status&quot;: &quot;AC&quot;,
+            &quot;address_type&quot;: &quot;Work&quot;,
+            &quot;created_at&quot;: &quot;2023-05-05 12:02:27&quot;,
+            &quot;updated_at&quot;: &quot;2023-05-05 12:02:27&quot;,
+            &quot;city&quot;: &quot;Tenkasi&quot;,
+            &quot;state&quot;: &quot;Tamil Nadu&quot;,
+            &quot;country&quot;: &quot;Iceland&quot;,
+            &quot;is_selected&quot;: 0
+        },
+        {
+            &quot;id&quot;: 53534,
+            &quot;address_code&quot;: &quot;ADDS29c6&quot;,
+            &quot;user_id&quot;: 1759,
+            &quot;first_name&quot;: &quot;&lt;first_Name&gt;&quot;,
+            &quot;last_name&quot;: &quot;&lt;last_Name&gt;&quot;,
+            &quot;mobile&quot;: &quot;7305055527&quot;,
+            &quot;apartment&quot;: &quot;HappyStay&quot;,
+            &quot;address&quot;: &quot;Thoraippakkam&quot;,
+            &quot;country_id&quot;: 100,
+            &quot;state_id&quot;: 35,
+            &quot;city_id&quot;: 4256,
+            &quot;zipcode&quot;: &quot;&lt;zipCode&gt;&quot;,
+            &quot;lat&quot;: null,
+            &quot;lng&quot;: null,
+            &quot;default&quot;: 0,
+            &quot;status&quot;: &quot;AC&quot;,
+            &quot;address_type&quot;: &quot;&lt;address_Type&gt;&quot;,
+            &quot;created_at&quot;: &quot;2023-05-06 13:21:11&quot;,
+            &quot;updated_at&quot;: &quot;2023-05-06 13:21:13&quot;,
+            &quot;city&quot;: &quot;Tenkasi&quot;,
+            &quot;state&quot;: &quot;Tamil Nadu&quot;,
+            &quot;country&quot;: &quot;Iceland&quot;,
+            &quot;is_selected&quot;: 0
+        }
+    ]
+}</p></pre>
+        </div>
+      </div>
+  </div>
+
+
+        </div>
+    </div>
+  </div>
+
+  </div>
+</div>
+
+
+<div class="element">
+
+
+<div class="tags indention">
+    <b>Tags:</b>
+       <a href="report-tag_2535156627.html">@Address</a>
+       <a href="report-tag_1769806259.html">@Address_Delete_User</a>
+</div>
+
+
+  <span class="lead-duration duration">1.486</span>
+
+
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-13">
+
+<div class="brief passed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">Verify delete user address to the application through api</span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-13" class="collapse collapsable-details ">
+
+
+
+
+
+<div class="steps inner-level">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-14">
+
+<div class="brief passed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </div>
+
+  <div id="steps-14" class="inner-level collapse collapsable-details ">
+      <div class="step">
+
+
+<div class="brief step-name-Given passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">User add header and bearer authurization for accesing address endpoints</span>
+
+  <span class="lead-duration duration">0.002</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When passed">
+  <span class="keyword indention">When</span>
+  <span class="name">User add request body for delete user address with saved addressId</span>
+
+  <span class="lead-duration duration">0.009</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">User send <span class="argument">&quot;DELETE&quot;</span> request for deleteUserAddress endpoint</span>
+
+  <span class="lead-duration duration">1.472</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">User verify the status code is <span class="argument">200</span></span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">User Should verify the deleteUserAddress response message matches <span class="argument">&quot;Address deleted successfully&quot;</span></span>
+
+  <span class="lead-duration duration">0.003</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+  </div>
+</div>
+
+
+
+
+  <div class="inner-level hooks-element-after">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-15">
+
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+    </div>
+
+    <div id="after-15" class="inner-level collapse collapsable-details ">
+        <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">After</span>
+              <span class="location name">com.stepdefinition.HooksClass.afterScenario(io.cucumber.java.Scenario)</span>
+
+  <span class="lead-duration duration">0.002</span>
+
+          </div>
+
+
+
+
+
+  <div class="outputs inner-level">
+      <div class="output indention">
+        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#output-16">
+          Output 1
+          <i class="chevron fa fa-fw"></i>
+        </div>
+        <div id="output-16" class="collapse collapsable-details " >
+          
+          <pre><p>{
+    &quot;status&quot;: 200,
+    &quot;message&quot;: &quot;Address deleted successfully&quot;
+}</p></pre>
+        </div>
+      </div>
+  </div>
+
+
+        </div>
+    </div>
+  </div>
+
+  </div>
+</div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-1 col-md-offset-10">
+      <i class="fa fa-chevron-circle-down fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('show')"></i>
+      <i class="fa fa-chevron-circle-up fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('hide')"></i>
+    </div>
+  </div>
+</div>
+
+<br/>
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>
